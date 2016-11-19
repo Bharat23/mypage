@@ -1268,6 +1268,13 @@
   <script src="assets/libs/sweetalert/sweet-alert.min.js"></script>
   <script src="assets/js/common.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').then(function() { 
+        console.log("Service Worker Registered"); 
+      });
+    }
+</script>
 </body>
 
 </html>
